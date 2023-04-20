@@ -8,8 +8,7 @@ let app = new PIXI.Application({
 
 let el = document.getElementById("app");
 el.appendChild(app.view);
-/*
-document.body.appendChild(app.view);
+//document.body.appendChild(app.view);
 const container = new PIXI.Container();
 app.stage.addChild(container);
 const texure = PIXI.Texture.from('smallbird_1.png');
@@ -25,4 +24,3 @@ app.ticker.add((delta) => {
     container.y += 1;
   }
 })
-*/

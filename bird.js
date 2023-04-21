@@ -25,4 +25,8 @@ export class Bird {
       this.#container.y += 1;
     })
   }
+
+  leave() {
+
+  }
 }

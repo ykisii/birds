@@ -28,7 +28,14 @@ export class Bird {
     })
   }
 
-  leave(x, y) {
-
+  leave() {
+    this.#app.ticker.add((delta) => {
+      if (this.#container.y < 0) {
+        this.#app.stage.removeChild(this.#container);
+        this.#app.ticker.destroy();
+        return;
+      }
+      this.#container.y -= 1;
+    })
   }
 }

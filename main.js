@@ -11,21 +11,3 @@ let el = document.getElementById("app");
 el.appendChild(app.view);
 const bird = new Bird(app);
 bird.appear(0, 0);
-//document.body.appendChild(app.view);
-/*
-const container = new PIXI.Container();
-app.stage.addChild(container);
-const texure = PIXI.Texture.from('smallbird_1.png');
-const bird = new PIXI.Sprite(texure);
-bird.anchor.set(0.5)
-bird.scale.set(0.5);
-container.addChild(bird);
-container.x = 0;
-container.y = 0;
-app.ticker.add((delta) => {
-  if (container.y < app.screen.height /2) {
-    container.x += 1;
-    container.y += 1;
-  }
-})
-*/

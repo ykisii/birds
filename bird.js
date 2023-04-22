@@ -15,6 +15,9 @@ export class Bird {
   }
 
   appear(x, y) {
+    if (this.#container == null) {
+      return;
+    }
     this.#container.x = x;
     this.#container.y = y;
     this.#app.ticker.add((delta) => {

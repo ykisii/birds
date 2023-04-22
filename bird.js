@@ -1,18 +1,20 @@
 export class Bird {
   #app;
   #container;
+  #img;
+
   constructor(app) {
     this.#app = app;
-  }
-
-  appear(x, y) {
     this.#container = new PIXI.Container();
     this.#app.stage.addChild(this.#container);
     const texure = PIXI.Texture.from('smallbird_1.png');
-    const bird = new PIXI.Sprite(texure);
-    bird.anchor.set(0.5)
-    bird.scale.set(0.5);
-    this.#container.addChild(bird);
+    this.#img = new PIXI.Sprite(texure);
+    this.#img.anchor.set(0.5)
+    this.#img.scale.set(0.5);
+    this.#container.addChild(this.#img);
+  }
+
+  appear(x, y) {
     this.#container.x = x;
     this.#container.y = y;
     this.#app.ticker.add((delta) => {
@@ -26,7 +28,7 @@ export class Bird {
     })
   }
 
-  leave() {
+  leave(x, y) {
 
   }
 }

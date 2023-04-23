@@ -10,4 +10,12 @@ let app = new PIXI.Application({
 let el = document.getElementById("app");
 el.appendChild(app.view);
 const bird = new Bird(app);
-bird.appear(0, 0);
+app.ticker.add((delta) => {
+  bird.appear(delta);
+});
+/*
+bird.appear(0, 0).then(() => {
+  console.log("yahhoooo!");
+  bird.leave();
+});
+*/

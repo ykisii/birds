@@ -24,7 +24,6 @@ export class Bird {
       if (this.#container.y > this.#app.screen.height / 2) {
         this.#app.stage.removeChild(this.#container);
         this.#app.ticker.destroy();
-        return;
       }
       this.#container.x += 1;
       this.#container.y += 1;

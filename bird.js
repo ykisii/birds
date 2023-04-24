@@ -12,8 +12,8 @@ export class Bird {
     this.#img.anchor.set(0.5)
     this.#img.scale.set(0.5);
     this.#container.addChild(this.#img);
-    this.#container.x = 0;
-    this.#container.y = 0;
+    this.#container.x = Math.floor(Math.random() * 150) - 150;
+    this.#container.y = Math.floor(Math.random() * 150) - 149;
   }
 
   appear(delta) {

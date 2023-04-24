@@ -13,9 +13,3 @@ const bird = new Bird(app);
 app.ticker.add((delta) => {
   bird.appear(delta);
 });
-/*
-bird.appear(0, 0).then(() => {
-  console.log("yahhoooo!");
-  bird.leave();
-});
-*/

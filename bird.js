@@ -3,10 +3,17 @@ export class Bird {
   #container;
   #img;
   #state;
+  #bird_state = {
+    "out": 1,
+    "down": 2,
+    "adjust": 3,
+    "stay": 4,
+    "leave": 5
+  };
   // out, down, adjust, stay 
 
   constructor(app) {
-    this.#state = "out";
+    this.#state = this.#bird_state.out; 
     this.#app = app;
     this.#container = new PIXI.Container();
     this.#app.stage.addChild(this.#container);
@@ -20,8 +27,8 @@ export class Bird {
   }
 
   appear(delta) {
-    if (this.#state === out) {
-      this.#state = "down";
+    if (this.#state === this.#bird_state.out) {
+      this.#state = this.#bird_state.down; 
     }
     if (this.#container == null) {
       return;

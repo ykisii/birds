@@ -36,6 +36,7 @@ export class Bird {
         this.#moveDown(delta);
         break;
       case this.#bird_state.adjust:
+        this.#moveAdjust(delta);
         break;
       default:
         //do nothing;
@@ -52,6 +53,10 @@ export class Bird {
       this.#container.x += 1;
       this.#container.y += 1;
     }
+  }
+
+  #moveAdjust(delta) {
+    console.log(" move adjust");
   }
 
   leave() {

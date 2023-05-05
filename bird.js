@@ -31,6 +31,17 @@ export class Bird {
       this.#state = this.#bird_state.down; 
     }
 
+    switch (this.#state) {
+      case this.#bird_state.down:
+        this.#moveDown(delta);
+        break;
+      default:
+        //do nothing;
+    }
+
+  }
+
+  #moveDown(delta) {
     if ((this.#app.screen.height / 2 - 30) < this.#container.y && this.#container.y < this.#app.screen.height / 2) {
       this.#container.x += 0.5;
       this.#container.y += 0.5;

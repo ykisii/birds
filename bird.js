@@ -35,6 +35,8 @@ export class Bird {
       case this.#bird_state.down:
         this.#moveDown(delta);
         break;
+      case this.#bird_state.adjust:
+        break;
       default:
         //do nothing;
     }

@@ -27,7 +27,7 @@ export class Bird {
     this.#img.scale.set(0.5);
     this.#container.addChild(this.#img);
     this.#container.x = Math.floor(Math.random() * 150) - 150;
-    this.#container.y = Math.floor(Math.random() * 150) - 149;
+    this.#container.y = Math.floor(Math.random() * 300) - 149;
     this.#searchPlace();
   }
 
@@ -55,7 +55,7 @@ export class Bird {
   }
 
   #moveDown(delta) {
-    if ((this.#target.y - 30) < this.#container.y && this.#container.y < this.#target.y) {
+    if (((this.#target.y - 30) < this.#container.y) && (this.#container.y < this.#target.y)) {
       this.#container.x += 0.5;
       this.#container.y += 0.5;
     }

@@ -50,15 +50,16 @@ export class Bird {
   }
 
   #searchPlace() {
-
+    this.#target.x = Math.floor(Math.random() * this.#app.screen.width) + 10;
+    this.#target.y = this.#app.screen.height / 2;
   }
 
   #moveDown(delta) {
-    if ((this.#app.screen.height / 2 - 30) < this.#container.y && this.#container.y < this.#app.screen.height / 2) {
+    if ((this.#target.y - 30) < this.#container.y && this.#container.y < this.#target.y) {
       this.#container.x += 0.5;
       this.#container.y += 0.5;
     }
-    else if (this.#container.y < this.#app.screen.height / 2) {
+    else if (this.#container.y < this.#target.y) {
       this.#container.x += 1;
       this.#container.y += 1;
     }

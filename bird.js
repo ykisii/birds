@@ -3,6 +3,10 @@ export class Bird {
   #container;
   #img;
   #state;
+  #target = {
+    "x": 0,
+    "y": 0
+  }
   #bird_state = {
     "out": 1,
     "down": 2,
@@ -24,6 +28,7 @@ export class Bird {
     this.#container.addChild(this.#img);
     this.#container.x = Math.floor(Math.random() * 150) - 150;
     this.#container.y = Math.floor(Math.random() * 150) - 149;
+    this.#searchPlace();
   }
 
   appear(delta) {
@@ -41,6 +46,10 @@ export class Bird {
       default:
         //do nothing;
     }
+
+  }
+
+  #searchPlace() {
 
   }
 

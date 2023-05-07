@@ -55,7 +55,7 @@ export class Bird {
   }
 
   #moveDown(delta) {
-    if (this.#target.x === this.#container.x && this.#target.y === this.#container.y) {
+    if (this.#target.y === this.#container.y + 30) {
       this.#state = this.#bird_state.adjust;
     }
     if (((this.#target.y - 30) < this.#container.y + 30) && (this.#container.y < this.#target.y + 30)) {

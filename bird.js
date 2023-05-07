@@ -55,7 +55,7 @@ export class Bird {
   }
 
   #moveDown(delta) {
-    if (this.#target.y === this.#container.y + 30) {
+    if (this.#target.y + 30 === this.#container.y) {
       this.#state = this.#bird_state.adjust;
     }
     if (((this.#target.y - 30) < this.#container.y + 30) && (this.#container.y < this.#target.y + 30)) {
@@ -69,7 +69,10 @@ export class Bird {
   }
 
   #moveAdjust(delta) {
-    console.log(" move adjust");
+    if (this.#target.y === this.#container.y) {
+      this.#state = this.#bird_state.stay;
+    }
+    this.#container.y -= 0.5;
   }
 
   leave() {

@@ -9,6 +9,7 @@ let app = new PIXI.Application({
 
 let el = document.getElementById("app");
 el.appendChild(app.view);
+/*
 const birds = [];
 for (let i = 0; i < 2; i++) {
   birds[i] = new Bird(app);
@@ -18,3 +19,4 @@ app.ticker.add((delta) => {
     bird.appear(delta);
   })
 });
+*/

@@ -20,6 +20,7 @@ export class Bird {
     this.#state = this.#bird_state.out; 
     this.#app = app;
     this.#container = new PIXI.Container();
+    this.#container.visible = false;
     this.#app.stage.addChild(this.#container);
     const texure = PIXI.Texture.from('smallbird_1.png');
     this.#img = new PIXI.Sprite(texure);

@@ -13,4 +13,8 @@ export class Title {
     this.#img.anchor.set(0.5);
     this.#container.addChild(this.#img); 
   }
+
+  visible(visible) {
+    this.#container.visible = visible;
+  }
 }

@@ -1,4 +1,5 @@
 import { Bird } from "./bird.js";
+import { Title } from "./title.js";
 // Create the application helper and add its render target to the app
 let app = new PIXI.Application({ 
   background: '#1099bb', 
@@ -9,6 +10,8 @@ let app = new PIXI.Application({
 
 let el = document.getElementById("app");
 el.appendChild(app.view);
+const title = new Title(app);
+title.visible(true);
 /*
 const birds = [];
 for (let i = 0; i < 2; i++) {

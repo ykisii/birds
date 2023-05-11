@@ -12,6 +12,10 @@ let el = document.getElementById("app");
 el.appendChild(app.view);
 const title = new Title(app);
 title.visible(true);
+title.addListnerOnClick((event) => {
+  console.log("onclick!!");
+  title.visible(false);
+});
 /*
 const birds = [];
 for (let i = 0; i < 2; i++) {

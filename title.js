@@ -17,4 +17,8 @@ export class Title {
   visible(visible) {
     this.#container.visible = visible;
   }
+
+  addListnerOnClick(listner) {
+    this.#img.onclick = listner;
+  }
 }

@@ -10,7 +10,7 @@ export class Title {
     this.#app.stage.addChild(this.#container);
     const texure = PIXI.Texture.from('bird.jpeg');
     this.#img = new PIXI.Sprite(texure);
-    this.#img.anchor.set(0.5);
+    this.#img.anchor.set(0);
     this.#container.addChild(this.#img); 
   }
 

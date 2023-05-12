@@ -11,14 +11,18 @@ export class Title {
     const texure = PIXI.Texture.from('bird.jpeg');
     this.#img = new PIXI.Sprite(texure);
     this.#img.anchor.set(0);
+    this.#img.interactive = true;
+    this.#img.buttonMode = true;
     this.#container.addChild(this.#img); 
   }
 
   visible(visible) {
+    console.log("visible");
     this.#container.visible = visible;
   }
 
   addListnerOnClick(listner) {
-    this.#img.onclick = listner;
+    console.log(listner);
+    this.#img.on('pointerdown', listner);
   }
 }

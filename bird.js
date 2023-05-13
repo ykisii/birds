@@ -77,7 +77,7 @@ export class Bird {
   }
 
   visible(visible) {
-    this.#container = visible;
+    this.#container.visible = visible;
   }
 
   leave() {

@@ -31,6 +31,6 @@ export class Title {
 
   addListnerOnClick(listner) {
     console.log(listner);
-    this.#img.on('pointerdown', listner);
+    this.#img2.on('pointerdown', listner);
   }
 }

@@ -4,12 +4,16 @@ import { Title } from "./title.js";
 let app = new PIXI.Application({ 
   background: '#1099bb', 
   //background: '#ffffff', 
-  width:760,
-  height:400
+  width:640,
+  height:360
 });
 
-let el = document.getElementById("app");
-el.appendChild(app.view);
+// let el = document.getElementById("app");
+// el.appendChild(app.view);
+document.getElementById("app").appendChild(app.view);
+let sprite = PIXI.Sprite.from('birds-title.png');
+app.stage.addChild(sprite);
+/*
 const title = new Title(app);
 title.visible(true);
 title.addListnerOnClick((event) => {
@@ -17,3 +21,4 @@ title.addListnerOnClick((event) => {
   title.visible(false);
   appearBirds(app);
 });
+*/

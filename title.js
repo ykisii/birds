@@ -1,32 +1,21 @@
 export class Title {
-  #container;
   #app;
-  #img;
+  #title;
   #img2;
 
   constructor(app) {
     this.#app = app;
-    this.#container = new PIXI.Container();
-    this.#container.visible = false;
-    this.#app.stage.addChild(this.#container);
-    const title = PIXI.Texture.from('birds-title.png');
-    this.#img = new PIXI.Sprite(title);
-    this.#img.anchor.set(0);
-    this.#img.interactive = true;
-    this.#img.buttonMode = false;
-    this.#container.addChild(this.#img); 
-
-    const start = PIXI.Texture.from('birds-start.png');
-    this.#img2 = new PIXI.Sprite(start);
-    this.#img2.anchor.set(40);
-    this.#img2.interactive = true;
-    this.#img2.buttonMode = true;
-    this.#container.addChild(this.#img2); 
+    this.#title = PIXI.Sprite.from('birds-title.png');
+    this.#title.visible = false;
+    this.#title.anchor.set(0.5);
+    this.#title.position.x = app.view.width / 2;
+    this.#title.position.y = app.view.height / 2 - 20;
+    app.stage.addChild(this.#title);
   }
 
   visible(visible) {
     console.log("visible");
-    this.#container.visible = visible;
+    this.#title.visible = visible;
   }
 
   addListnerOnClick(listner) {

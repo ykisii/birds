@@ -11,3 +11,6 @@ let app = new PIXI.Application({
 document.getElementById("app").appendChild(app.view);
 const title = new Title(app);
 title.visible(true);
+title.addListnerOnClick((e) => {
+  console.log(e);
+})

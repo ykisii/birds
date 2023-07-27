@@ -22,6 +22,7 @@ export class Title {
   visible(visible) {
     console.log("visible");
     this.#title.visible = visible;
+    this.#start.visible = visible;
   }
 
   addListnerOnClick(listner) {

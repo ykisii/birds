@@ -3,8 +3,8 @@ import { MainStage } from "./main_stage.js";
 import { Title } from "./title.js";
 // Create the application helper and add its render target to the app
 let app = new PIXI.Application({ 
-  background: '#1099bb', 
-  //background: '#ffffff', 
+  //background: '#1099bb', 
+  background: '#ffffff', 
   width:640,
   height:360
 });

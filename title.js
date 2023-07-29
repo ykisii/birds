@@ -12,6 +12,9 @@ export class Title {
     this.#title.position.y = app.view.height / 2 - 20;
 
     this.#start = PIXI.Sprite.from('birds-start.png');
+    this.#start.anchor.set(0.5);
+    this.#start.position.x = app.view.width / 2;
+    this.#start.position.y = app.view.height / 2 + 5;
     this.#start.interactive = true;
     this.#start.buttonMode = true;
     app.stage.addChild(this.#start);
